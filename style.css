@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    padding-top: 68px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px 20px;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar img {
+    width: 48px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+}
+
+.nav-item a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    display: none;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.banner {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    width: 250px;
+
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px;
+    transition: 0.3s;
+    background-color: white;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 4px;
+    background-color: rgb(240, 240, 240);
+}
+
+.name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+.description {
+    color: gray;
+    font-size: 12px;
+    margin: 6px 0;
+    text-decoration: none;
+}
+
+.discount {
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.price {
+    color: rgb(43, 117, 255);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.cardlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.about-us {
+    display: flex;
+}
+
+.home-card {
+    width: 250px;
+    height: 380px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+.home-card img {
+    width: 250px;
+    height: 380px;
+    object-fit: cover;
+}
+
+.home-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    padding: 36px;
+}
+
+.banner-op {
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.banner-op img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    width: 100%;
+    height: 90px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0px;
+}
+
+.footer-icon {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-icon a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    padding: 5px;
+    width: 32px;
+    height: 28px;
+}
+
+footer a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.home-card::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(0deg,
+            transparent,
+            transparent 40%,
+            rgba(0, 255, 255, 0.3));
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.home-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 81, 255, 0.514);
+}
+
+.home-card:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+}
+
+.about p {
+    margin-left: 6px;
+    font-size: 18px;
+}
+
+.about h2 {
+    color: rgb(0, 0, 0);
+    font-family: "Bungee", sans-serif;
+    font-size: 24px;
+    margin-left: 6px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: "Bungee", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.cardlist-home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    padding: 36px;
+}
+.card-box {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+.card-box .front,
+.card-box .back {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s;
+}
+.card-box img {
+  width: 100%;
+  object-fit: cover;
+}
+.card-box .back {
+  opacity: 0;
+}
+.card:hover .card-box .front {
+  opacity: 0;
+}
+.card:hover .card-box .back {
+  opacity: 1;
+}
